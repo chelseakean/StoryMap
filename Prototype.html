@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proto2 Climate Projection in Canada 2000 - 2100</title>
+<link defer rel="stylesheet" href="modules/knightlab_juxtapose/juxtapose.min.css">
+<link defer rel="stylesheet" href="modules/knightlab_storymap/storymap.css">
+<link defer rel="stylesheet" href="stories/styles/fonts.css">
+<link defer rel="stylesheet" href="stories/styles/layout.css">
+<link defer rel="stylesheet" href="modules/magnifier/magnifier.css">
+<link defer rel="stylesheet" href="modules/juxtafier/juxtafier.css">
+<link defer rel="stylesheet" href="modules/modal/modal.css">
+</head>
+<body id="container">
+
+
+    <!-- The StoryMap container can go anywhere on the page. Be sure to
+        specify a width and height.  The width can be absolute (in pixels) or
+        relative (in percentage), but the height must be an absolute value.
+        Of course, you can specify width and height with CSS instead -->
+    <div id="mapdiv" style="width: 100%; height: 900px;"></div>
+
+    <div id="magnifier">
+        <span id="close">&times;</span>
+        <div id="magnifierContent">
+
+            <div id="magGlass" class="img-magnifier-glass"></div>
+            <img id="magImage" />
+        </div>
+    </div>
+
+    <div id="juxtafier">
+        <span id="juxtaClose">&times;</span>
+        <div id="juxtafierContent">
+
+        </div>
+    </div>
+
+
+
+    <!-- Your script tags should be placed before the closing body tag. -->
+
+
+    <script src="modules/utilities/Language.js"></script>
+    <script src="modules/utilities/Fetch.js"></script>
+    <script  src="modules/modal/modal.js"></script>
+    <script  src="modules/knightlab_juxtapose/juxtapose.min.js"></script>
+    <script  src="modules/knightlab_storymap/storymap.js"></script>
+    <script  src="modules/magnifier/magnifier.js"></script>
+    <script  src="modules/juxtafier/juxtafier.js"></script>
+    <script  src="modules/d3/d3.v5.min.js"></script>
+    <script  src="modules/dataviz/contributortree.js"></script>
+    <script>
+    // storymap_data can be an URL or a Javascript object
+    var storymap_data = {"storymap":
+
+    {"attribution": "", "call_to_action": false, "zoomify": {"path": "https://chelseakean.github.io/FCSplashMap/./", "width": 20324, "height": 12750}, "calculate_zoom": false, "show_lines": false, "show_history_line": false, "use_custom_markers": true,
+
+
+         "slides": [
+
+             {"media": {"url": "", "caption": "", "credit": ""},
+             "location": {"lat": 73.97379820507658, "line": true, "lon": -65.8984375, "zoom": 3, "icon": "images/empty.png"}, "background": {},
+             "text": {"headline": "Climate Projection Overview", "text": "intro RCP diagram and discuss temp increase winter vs summer? RCPgraph summer v winter juxtapose"},
+             "date": "", "type": ""},
+
+             {"date": "", "text": {"headline": "Precipitation in the Taiga Region", "text": ""},
+             "location": {"lat": 76.81868765201568, "line": true, "lon": -121.81396484375, "zoom": 5, "icon": "images/rainy.png"},
+             "media": {"url": "<div class= \"juxtaWrapper\"><iframe sandbox=\"allow-same-origin allow-scripts\" \" src=\"https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=248b2a2c-eb6e-11e9-b9b8-0edaf8f81e27\"sandbox=\"allow-scripts\"></iframe>", "credit": "", "caption": ""}},
+
+             {"date": "", "text": {"headline": "Fire Risk in the North West Territories", "text": ""},
+             "location": {"lat": 72.80211845876491, "line": true, "lon": -100.21484375, "zoom": 5, "icon": "images/fire.png"},
+             "media": {"url": "<iframe sandbox=\"allow-same-origin allow-scripts\" \" src=\"https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0e9f67de-e92d-11e9-b9b8-0edaf8f81e27\"sandbox=\"allow-scripts\"></iframe>", "credit": "", "caption": ""}},
+
+
+             {"date": "", "text": {"headline": "Pests in British Columbia", "text": "<img src=\"images/CMI_T0.jpg\" />"},
+             "location": {"lat": 67.60922060496382, "line": true, "lon": -127.61718749999999, "zoom": 5, "icon": "images/ant.png"},
+             "media": {"url": "", "credit": "", "caption": ""}},
+
+             {"date": "", "text": {"headline": "Drought in the Prairies", "text": "<div class=\"juxtapose\"><iframe sandbox=\"allow-same-origin allow-scripts\" \" src=\"https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0e9f67de-e92d-11e9-b9b8-0edaf8f81e27\"sandbox=\"allow-scripts\"></iframe></div><p>JuxtaposeJS<sup>1</sup></p>"},
+             "location": {"lat": 64.75472592723178, "line": true, "lon": -97.5703125, "zoom": 4, "icon": "images/desert.png"},
+             "media": {"url": "", "credit": "", "caption": ""}},
+
+             {"date": "", "text": {"headline": "Industry Sensitivity in Canada’s Interior", "text": "<div class=\"bold\">Ground surveying is the process of collecting data on the earth’s surface, such as survey points and the distances and angles between them.</div><div class=\"magWrapper\"><img class=\"magnify\" src=\"stories/img/zoomGround_nfdb_2015_idv30160.jpg\"><div class=\"magCapWrap\">  <div class=\"magCap\">This map was created from a GPS survey, and represents a fire near the Pemberton Icefield in British Columbia. The blue features are icefields. Notice how the montain valleys are filled with smoke. On the map, you can see how this fire would impact harvesting of the forest in the area. <sup>9</sup></div></div></div> Global Positioning System (GPS) technology provides a way to acquire coordinate data for survey points during ground or aerial surveys. During the survey process, contextual information about the disturbance is recorded using first-hand observations, including the disturbance severity and the tree species affected. Maps made during a ground survey often begin as sketch polygons on a paper map that are subsequently digitized.<div class=\"juxtaWrapper\"><div id=\"juxta\"><img src=\"stories/img/zoomSat_mffp_2013.jpg\"><img src=\"stories/img/mffp_trimsat_2013_comp_b4.jpg\"></div><div class=\"juxCapWrap\"><div class=\"juxCap\">This slider contrasts the disturbance polygon shown above with a Landsat 8 scene capturing the fire scar. <sup>9</sup></div></div></div>Ground survey maps typically do not exclude undisturbed areas located within the disturbance perimeter; because of this, they provide a generalized spatial record. What’s more, they are only completed for some disturbances. However, ground surveys can provide vital information and definitive attribution. This information can be combined with other information from other data collection methods to provide a better understanding of a disturbance.<div class=\"footer\"><a href=\"https://ca.nfis.org/\"><img src=\"stories/img/nfis.gif\"></a></div>"},
+             "location": {"lat": 60.2679226294176, "line": true, "lon": -50.96875, "zoom": 4, "icon": "images/dollar.png"},
+             "media": {"url": "", "credit": "", "caption": ""}},
+
+             {"date": "", "text": {"headline": "Spruce Budworm in the Atlantic Provinces", "text": "<div class=\"bold\">Some forest fire maps need to be produced quickly while a fire is burning.</div>These maps are made to detect the boundaries of active fires to aid in fire response, and must be produced even in smoky conditions. They can be produced using aerial surveys, satellite surveys that detect heat (hot spots), or ground surveys. The main interest is getting a map quickly to show where fires are actively burning.<div class=\"juxtaWrapper\"><div id=\"juxta\"><img src=\"https://ca.nfis.org/forestdisturbances/stories/img/juxtaOne_nbac_2017_id856.jpg\"><img src=\"https://ca.nfis.org/forestdisturbances/stories/img/juxtaOne_nfdb_2017_idc10784.jpg\"></div><div class=\"juxCapWrap\"> <div class=\"juxCap\">This slider contrasts maps of a 2017 fire which burned over 520,885 ha and threatened several communities in British Columbia. The map on the right was acquired during an aerial survey, while the map on the left was sketch-mapped from high-resolution landsat imagery. On the map, you can see where this fire occurred.<sup>11</sup></div></div></div> <div class=\"footer\"><a href=\"https://ca.nfis.org/\"><img src=\"stories/img/nfis.gif\"></a></div>"},
+             "location": {"lat": 64.80211845876491, "line": true, "lon": -8.21484375, "zoom": 5, "icon": "images/ant.png"},
+             "media": {"url": "", "credit": "", "caption": ""}},
+
+             {"date": "", "text": {"headline": "Pests Across the Country", "text": "<div class=\"juxtaWrapper\"><div id=\"juxta\"><iframe sandbox=\"allow-same-origin allow-scripts\" \" src=\"https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=248b2a2c-eb6e-11e9-b9b8-0edaf8f81e27\"sandbox=\"allow-scripts\"></iframe></div></div>"},
+             "location": {"lat": 73.97379820507658, "line": true, "lon": -65.8984375, "zoom": 3, "icon": "images/ant.png"},
+             "media": {"url": "", "credit": "", "caption": ""}}],
+
+             "map_background_color": "#ffffff", "map_type": "zoomify", "call_to_action_text": "", "map_as_image": false, "map_subdomains": ""}, "height": "800"}
+
+    // certain settings must be passed within a separate options object
+    var storymap_options = {"use_custom_markers": true};
+
+    var storymap = new VCO.StoryMap('mapdiv', storymap_data, storymap_options);
+    window.onresize = function(event) {
+        storymap.updateDisplay(); // this isn't automatic
+    }
+    </script>
+
+</body>
+</html>
